@@ -8,8 +8,10 @@
 
 ST 0324 Internet of Things (IOT)
 
-```
+
 ## Table of Contents
+```
+
 * Section 1 Overview of Gardening Water Dispenser
 * Section 2 Hardware requirements
 * Section 3 Hardware setup
