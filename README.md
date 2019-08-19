@@ -86,9 +86,9 @@ e) Arduino boards are actually micro-controllers rather than 'full' computers. A
 In this section, we will connect the neccessary parts displayed in section 2.
 
 ## Frizing Diagram
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/diagram 1.jpg "Optional Title")
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/diagram1.jpg "Optional Title")
 
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/diagram 2.jpg "Optional Title")
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/diagram2.jpg "Optional Title")
 
 
 
