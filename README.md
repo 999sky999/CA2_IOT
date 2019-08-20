@@ -45,6 +45,18 @@ Overview of the system
 
 ## C. How the web application looks like?
 
+### Main Page
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Application(1).jpg "DHT11")
+
+### Second Page
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/application(2).jpg "DHT11")
+
+### Third Page
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Application(3).jpg "DHT11")
+
+### Fourth Page
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Application(3).jpg "DHT11")
+
 
 ### Section 2 Hardware requirements 
 
