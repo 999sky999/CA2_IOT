@@ -86,10 +86,15 @@ d) Arduino boards are actually micro-controllers rather than 'full' computers. A
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Arduino.jpg "Optional Title")
 
-##### Soil Moisture Sensor
+#### Soil Moisture Sensor
 e) Soil Moisture Sensor/ for this project, that requires for automatic plant supply, the moisture of the soil must be measured, the soil Moisture Sensor must be included. 
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/moisture.jpg "Optional Title")
+
+#### RPI camera
+f)The RPI camera is attached to the RPI ribbon, which will be used to capture images on the environment.
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Arduino.jpg "Optional Title")
+
 
 #### Resistor (6 x 330 Ω Resistors, 3 x 10K Ω Resistor)
 a)2 Resistor helps to ensure the flow tothe rasp berry pi is smooth and not be damaged.
