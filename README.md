@@ -96,6 +96,10 @@ f)The RPI camera is attached to the RPI ribbon, which will be used to capture im
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/picamera.jpg "DHT11")
 
+#### LCD screen
+g) Used to display the sensors data 
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/LCD screen.jpg "DHT11")
 
 #### Resistor (6 x 330 Ω Resistors, 3 x 10K Ω Resistor)
 a)2 Resistor helps to ensure the flow tothe rasp berry pi is smooth and not be damaged.
