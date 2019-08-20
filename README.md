@@ -120,3 +120,9 @@ d) Enter a name for your project thing. Click next.
 e) Click create certificate. Download all four files. As for the root CA, download the VeriSign Class 3 Public Primary G5 root CA certificate file.
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/resistor.png "Optional Title")
+
+### Section 11 References
+
+1) Practical 6
+2) Practical 4
+
