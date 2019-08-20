@@ -93,7 +93,8 @@ e) Soil Moisture Sensor/ for this project, that requires for automatic plant sup
 
 #### RPI camera
 f)The RPI camera is attached to the RPI ribbon, which will be used to capture images on the environment.
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Arduino.jpg "Optional Title")
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/RPI picamera.jpg "Optional Title")
 
 
 #### Resistor (6 x 330 Ω Resistors, 3 x 10K Ω Resistor)
