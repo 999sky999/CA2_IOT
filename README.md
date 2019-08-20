@@ -102,6 +102,7 @@ a)2 Resistor helps to ensure the flow tothe rasp berry pi is smooth and not be d
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/resistor.png "Optional Title")
 
 b) As this application requires a Light Dependent Resistor, we will use a 10K ohms Resistor to help moderate the flow of current.
+
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/resistor2.jpg "Optional Title")
 
 
