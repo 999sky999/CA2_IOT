@@ -69,21 +69,20 @@ c) With MCP3008 you can read quite a few analog signals from the Pi.  This chip 
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/MCP3008.jpg "Optional Title")
 
+#### Arduino
+d) Arduino boards are actually micro-controllers rather than 'full' computers. Arduino lacks a full operating system but can run written code that is interpreted by its firmware. It is much flexible than the normal raspberry pi and can execute codes directly without no OS overhead.
+
+##### Soil Moisture Sensor
+e) Soil Moisture Sensor/ for this project, that requires for automatic plant supply, the moisture of the soil must be measured, the soil Moisture Sensor must be included. 
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/moisture.jpg "Optional Title")
+
 #### Resistor (6 x 330 Ω Resistors, 3 x 10K Ω Resistor)
-d)2 Resistor helps to ensure the flow tothe rasp berry pi is smooth and not be damaged.
+a)2 Resistor helps to ensure the flow tothe rasp berry pi is smooth and not be damaged.
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/resistor.png "Optional Title")
 
 b) As this application requires a Light Dependent Resistor, we will use a 10K ohms Resistor to help moderate the flow of current.
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/resistor2.jpg "Optional Title")
-
-
-#### Arduino
-e) Arduino boards are actually micro-controllers rather than 'full' computers. Arduino lacks a full operating system but can run written code that is interpreted by its firmware. It is much flexible than the normal raspberry pi and can execute codes directly without no OS overhead.
-
-##### Soil Moisture Sensor
-f) Soil Moisture Sensor/ for this project, that requires for automatic plant supply, the moisture of the soil must be measured, the soil Moisture Sensor must be included. 
-
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/moisture.jpg "Optional Title")
 
 
 
