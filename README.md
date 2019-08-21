@@ -277,8 +277,24 @@ c) On the next page, check the 'Keep all versions of an object in the same bucke
 
 d) On the next page, ensure the 'Block all public access' checkbox is checked, click 'Next', and click 'Create bucket'.
 
+### Section 8 Create AWS IoT MQTT rules
+
+a) Click on 'Services' at the top of the page, and click on 'IoT Core' under the 'Internet of Things' section.
+
 ### Section 11 References
 
 1) Practical 6
 2) Practical 4
+
+
+
+
+
+
+
+
+
+
+
+
 
