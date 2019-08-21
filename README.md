@@ -87,7 +87,7 @@ d) Arduino boards are actually micro-controllers rather than 'full' computers. A
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Arduino.jpg "Optional Title")
 
 #### Soil Moisture Sensor
-e) Soil Moisture Sensor/ for this project, that requires for automatic plant supply, the moisture of the soil must be measured, the soil Moisture Sensor must be included. 
+e) Soil Moisture Sensor/ for this project, that requires for automatic plant supply, the moisture of the soil must be measured, the soil Moisture Sensor must be included to measure the soil moisture current level and pass in values. 
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/moisture.jpg "Optional Title")
 
@@ -101,8 +101,16 @@ g) Takes in data from sensors and displaying it in the physical screen.
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/LCD.jpg "DHT11")
 
+#### 5v 1-Channel Relay Module
+h) A relay is an electrically operated switch. It uses an electromagnet to mechanically operate a switch, it is important for channel relay module to be operating the switch and control high voltages with a low voltage by connecting it to an MCU.
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/ChannelRelay.jpg "DHT11")
+
+
+
+
 #### Resistor (6 x 330 Ω Resistors, 3 x 10K Ω Resistor)
-a)2 Resistor helps to ensure the flow tothe rasp berry pi is smooth and not be damaged.
+a)2 Resistor helps to ensure the flow to the rasp berry pi is smooth and not be damaged.
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/resistor.png "Optional Title")
 
 b) As this application requires a Light Dependent Resistor, we will use a 10K ohms Resistor to help moderate the flow of current.
@@ -182,26 +190,6 @@ k) Download all certificates shown on the page. Note that the last download link
 l) On the next page, attach the policy you created earlier to your thing, then click 'Register thing'.
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20163335.png)
-
-### Section 5 Create IAM roles
-
-a) Click 'Services' at the top of the page. Look for 'IAM' under 'Security, Identity and Compliance', and click on it.
-
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20164327.png)
-
-b) Select 'Roles', then click 'Create role'.
-
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20164550.png)
-
-c) On the next page, under 'Choose service to use role', select 'EC2', then click 'Next: Permissions'.
-
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20164756.png)
-
-d) On the next page, assign the following permissions to the role. Use the search bar to make finding the permissions easier.
-
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20165215.png)
-
-e) Click 'Next: Tags'. On the next page, click 'Next: Review' without doing anything. On the last page, name the policy 'aws_iot_mqtt_rules', then click 'Create'.
 
 ### Section 11 References
 
