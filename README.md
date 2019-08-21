@@ -27,7 +27,7 @@ ST 0324 Internet of Things (IOT)
 ### Section 1 Overview of Gardening Water Dispenser
 
 ## A. What is Gardening Water Dispenser about?
-The garden automatic watering device, targeted for homeowners with plants. It activates whenever the soil moisture goes below the specific value,captures a picture at the same time prior to the environment, takes in light values as well as the temperature values around the plant, monitoring the plant as tight as possible, to ensure its survival.  Garden watering tool is for those who are keen on saving money and time. It is designed to ease the burdens of watering plants on a daily basis,  adjustment of the dripping volume at a given time which means the plants won’t be taking in insufficiently or excessively. Users can also access the website to control the machine on/off switch manually by both mobile or computer.
+The garden automatic watering tool, it activates whenever the soil moisture goes below the specific value,captures a picture at the same time prior to the environment, takes in light values as well as the temperature values around the plant, monitoring the plant as tight as possible, to ensure its survival.  Garden watering tool is for those who are keen on saving money and time. It is designed to ease the burdens of watering plants on a daily basis,  adjustment of the dripping volume at a given time which means the plants won’t be taking in insufficiently or excessively. Users can also access the website to control the machine on/off switch manually by both mobile or computer.
 
 ## B. How the final RPI set-up looks like
 ```
@@ -87,7 +87,7 @@ d) Arduino boards are actually micro-controllers rather than 'full' computers. A
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Arduino.jpg "Optional Title")
 
 #### Soil Moisture Sensor
-e) Soil Moisture Sensor/ for this project, that requires for automatic plant supply, the moisture of the soil must be measured, the soil Moisture Sensor must be included to measure the soil moisture current level and pass in values. 
+e) Soil Moisture Sensor/ for this project, that requires for automatic plant supply, the moisture of the soil must be measured, the soil Moisture Sensor must be included. 
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/moisture.jpg "Optional Title")
 
@@ -101,16 +101,8 @@ g) Takes in data from sensors and displaying it in the physical screen.
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/LCD.jpg "DHT11")
 
-#### 5v 1-Channel Relay Module
-h) A relay is an electrically operated switch. It uses an electromagnet to mechanically operate a switch, it is important for channel relay module to be operating the switch and control high voltages with a low voltage by connecting it to an MCU.
-
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/ChannelRelay.jpg "DHT11")
-
-
-
-
 #### Resistor (6 x 330 Ω Resistors, 3 x 10K Ω Resistor)
-a)2 Resistor helps to ensure the flow to the rasp berry pi is smooth and not be damaged.
+a)2 Resistor helps to ensure the flow tothe rasp berry pi is smooth and not be damaged.
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/resistor.png "Optional Title")
 
 b) As this application requires a Light Dependent Resistor, we will use a 10K ohms Resistor to help moderate the flow of current.
@@ -190,6 +182,38 @@ k) Download all certificates shown on the page. Note that the last download link
 l) On the next page, attach the policy you created earlier to your thing, then click 'Register thing'.
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20163335.png)
+
+### Section 5 Create IAM roles
+
+a) Click 'Services' at the top of the page. Look for 'IAM' under 'Security, Identity and Compliance', and click on it.
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20164327.png)
+
+b) Select 'Roles', then click 'Create role'.
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20164550.png)
+
+c) On the next page, under 'Choose service to use role', select 'IoT'. Under 'Select your use case', select 'IoT', then click 'Next: Permissions'.
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20164756.png)
+
+d) Click 'Next: Tags' without doing anything. On the next page, click 'Next: Review' without doing anything. On the last page, name the role 'aws_iot_mqtt_rules', then click 'Create role'.
+
+e) Return to IAM roles. Click on 'aws_iot_mqtt_rules', then click 'Attach policies'. Find the following policy, and attach it to the role.
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20171115.png)
+
+f) Repeat steps (a) and (b) under this section. Under 'Choose service to use role', select 'EC2'. Click 'Next: Permissions'. Use the search bar to find the following roles and attach them.
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20171530.png)
+
+g) Click 'Next: Tags', then 'Next: Review'. Name the role as 'ec2_server'. Click 'Create role'
+
+h) Return to IAM Roles. Click 'Create role', then select 'Lambda' under 'Choose service to use this role'. Click 'Next: Permissions'. Attach the following policies:
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20172534.png)
+
+i) Click 'Next: Tags', then 'Next: Review'. Name the role as 'updated_prefs_alerter'. Click 'Create role'
 
 ### Section 11 References
 
