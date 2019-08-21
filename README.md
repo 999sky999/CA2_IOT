@@ -69,7 +69,7 @@ Here are the hardware needed and what they are used for.
 #### DHTT sensor
 a) This DHT11 Temperature and Humidity Sensor features a calibrated digital signal output with the temperature and humidity sensor capability. This sensor includes a resistive element and a sensor for wet NTC temperature measuring devices. In this project, DHTT sensor will sense the surrounding temperature and display it in the website as real time value.
 
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/DHT11.jpg "DHT11")
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/DHT11.jpg "DHT11"  width="400" height="790")
 
 #### Light Dependant Resistor (LDR)
 b)The resistance of a photoresistor decreases with increasing incident light intensity, in other words, it detects the amount of light value. In this project, the LDR plays a part in detecting the current light values and displaying it in the website as real time value.
