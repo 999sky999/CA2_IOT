@@ -277,9 +277,110 @@ c) On the next page, check the 'Keep all versions of an object in the same bucke
 
 d) On the next page, ensure the 'Block all public access' checkbox is checked, click 'Next', and click 'Create bucket'.
 
-### Section 8 Create AWS IoT MQTT rules
+### Section 8 Create AWS Lambda function
+
+a) Click on 'Services' at the top of the page, and click on 'Lambda' under the 'Compute' section.
+
+b) Click 'Functions', then click 'Create function' in the top right of the page. Select 'Author from scratch' and name the function 'alert_updated_prefs'. Select 'Python 3.7' as the runtime language. Expand 'Choose or create an execution role, select 'Use an existing role' under 'Execution role'. Under 'Existing role', select 'updated_prefs_alerter', then click 'Create function'.
+
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-22%20003612.png)
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-22%20004035.png)
+
+c) Scroll down to 'Function code'. Replace the contents with the following, then save.
+
+```
+import json
+import boto3
+from boto3.dynamodb.conditions import Key, Attr
+def lambda_handler(event, context):
+    try:
+        dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
+        table = dynamodb.Table('user_preferences')
+        response = table.query(
+                    KeyConditionExpression=Key('name').eq('default'),
+                    ScanIndexForward=False
+                    )
+        
+        client = boto3.client('iot-data', region_name='us-east-1')
+        environment_refresh_interval = response["Items"][0]["environment_refresh_interval"]
+        soil_refresh_interval = response["Items"][0]["soil_refresh_interval"]
+        photo_capture_interval = response["Items"][0]["photo_interval"]
+        dry_soil_threshold = response["Items"][0]["dry_soil_threshold"]
+        watering_duration = response["Items"][0]["watering_duration"]
+    except:
+        return "An exception occurred while retrieving records from DynamoDB."
+    try:
+        client.publish(
+            topic="device_admin/updatePrefs",
+            qos = 1,
+            payload=json.dumps({
+                "environmentRefreshInterval": int(environment_refresh_interval),
+                "soilRefreshInterval": int(soil_refresh_interval),
+                "photoCaptureInterval": int(photo_capture_interval),
+                "drySoilThreshold": int(dry_soil_threshold),
+                "wateringDuration": int(watering_duration)
+            })
+            )
+        return "Successfully published updated preferences"
+    except:
+        return "An exception occurred while publishing the updated preferences."
+        
+```
+### Section 9 Create AWS SNS topic and subscribe to it
+a)Click on 'Services' at the top of the page, type 'SNS' in the search bar then click on 'Simple Notification Service'.
+
+b) Click 'Topics', then 'Create topic'. Name it 'password_reset' and click 'Create topic'.
+
+c) On next page, click 'Subscriptions' tab, then create a subscription. Set 'Protocol' to 'Email' and 'Endpoint' to the email address you wish to use to receive password reset emails. Click 'Create subscription', then log in to the email address you entered and confirm the subscription through an email sent from AWS.
+
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-22%20005410.png)
+
+### Section 10 Create AWS IoT MQTT rules
 
 a) Click on 'Services' at the top of the page, and click on 'IoT Core' under the 'Internet of Things' section.
+
+b) Click 'Act', then click the 'Create Rule' button on the top right of the page.
+
+c) Name the rule 'store_soil_moisture'. Under 'Rule query statement', enter the following text:
+
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-22%20000638.png)
+
+d) Under 'Select one or more actions', click 'Add action', select 'Split message into multiple columns of a DynamoDB table (DynamoDBv2)', then scroll to bottom of page and click 'Configure action'.
+
+e) Under 'Choose resource', select 'soil_moisture'. Under'Choose or create a role to grant AWS IoT access to perform this action.', choose 'aws_iot_mqtt_rules'. Click 'Add action' when done, then click 'Create rule'.
+
+f) You will be returned to AWS IoT Rules. Click 'Create' to create another rule named 'store_environment_data'. Under 'Rule query statement', enter the following, then repeat step (d).
+
+```
+
+SELECT * FROM 'sensors/environment' 
+
+```
+g) Under 'Choose a resource', select 'light_temperature_humidity'. Under'Choose or create a role to grant AWS IoT access to perform this action.', choose 'aws_iot_mqtt_rules'. Click 'Add action' when done, then click 'Create rule'.
+
+h) You will be returned to AWS IoT Rules. Click 'Create' to create another rule named 'store_pi_images'. Under 'Rule query statement', enter the following. Click 'Add action' and select 'Store a message in an Amazon s3 bucket' then click 'Configure action'. Select the S3 bucket you created, and set the key as 'image'. Attach the 'aws_iot_mqtt_rules' role
+```
+
+SELECT * FROM 'sensors/camera'
+
+```
+i) Click 'Add action' and select 'Store a message in an Amazon s3 bucket' then click 'Configure action'. Select the S3 bucket you created, and set the key as 'image'. Under 'Choose or create a role to grant AWS IoT access to perform this action.', choose 'aws_iot_mqtt_rules'. Click 'Add action' when done, then click 'Create rule'.
+
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-22%20002701.png)
+
+j) Create a rule named 'send_generated_password'. Add action 'Send a message as an SNS push notification', with SNS target set as 'password_reset', message format as JSON and role as 'aws_iot_mqtt_rules'. Under 'Rule query statement', enter the following, then create rule.
+```
+
+SELECT * FROM 'password/reset' 
+
+```
+
+k) Create a rule named 'get_updated_prefs'. Enter the following under 'Rule query statement'. Set action as 'Send a message to a Lambda function. Select the 'alert_updated_prefs' function, then create rule.
+```
+
+SELECT * FROM 'device_admin/getUpdatedPrefs' 
+
+```
 
 ### Section 11 References
 
