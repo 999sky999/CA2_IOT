@@ -87,7 +87,7 @@ d) Arduino boards are actually micro-controllers rather than 'full' computers. A
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Arduino.jpg "Optional Title")
 
 #### Soil Moisture Sensor
-e) Soil Moisture Sensor/ for this project, that requires for automatic plant supply, the moisture of the soil must be measured, the soil Moisture Sensor must be included. 
+e) Soil Moisture Sensor/ for this project, that requires for automatic plant supply, the moisture of the soil must be measured, the soil Moisture Sensor must be included to measure the soil moisture current level and pass in values. 
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/moisture.jpg "Optional Title")
 
@@ -102,7 +102,7 @@ g) Takes in data from sensors and displaying it in the physical screen.
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/LCD.jpg "DHT11")
 
 #### Resistor (6 x 330 Ω Resistors, 3 x 10K Ω Resistor)
-a)2 Resistor helps to ensure the flow tothe rasp berry pi is smooth and not be damaged.
+a)2 Resistor helps to ensure the flow to the rasp berry pi is smooth and not be damaged.
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/resistor.png "Optional Title")
 
 b) As this application requires a Light Dependent Resistor, we will use a 10K ohms Resistor to help moderate the flow of current.
