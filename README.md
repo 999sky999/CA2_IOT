@@ -130,13 +130,16 @@ a) First, navigate to Iot Core
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20155802.png "Optional Title")
 
 b) Click 'Secure', then 'Policies' Click 'Create' in the top right corner.
+
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20162247.png)
 
 c) Give the policy a name.
+
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20162541.png)
 
 d) Scroll down to 'Add statements'. Click 'Advanced mode', and a text box should appear.
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20162756.png)
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08
+-21%20162756.png)
 
 e) Replace the contents of the text box with the following:
 ```
@@ -171,10 +174,13 @@ j) Click create certificate.
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20161042.png "Optional Title")
 
 k) Download all certificates shown on the page. Note that the last download link opens a page in a new tab. Download the 'Amazon Root CA 1' certificate. Save them to a secure and easily accessible location as you will need them later in order for your Raspberry Pis and server to connect to AWS IoT's MQTT broker. After all certificates have been downloaded, click 'Activate'.
+
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20161337.png)
+
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20161749.png)
 
 l) On the next page, attach the policy you created earlier to your thing, then click 'Register thing'.
+
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20163335.png)
 
 ### Section 11 References
