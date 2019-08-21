@@ -138,8 +138,8 @@ c) Give the policy a name.
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20162541.png)
 
 d) Scroll down to 'Add statements'. Click 'Advanced mode', and a text box should appear.
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08
--21%20162756.png)
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20162756.png)
 
 e) Replace the contents of the text box with the following:
 ```
