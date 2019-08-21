@@ -34,11 +34,11 @@ The garden automatic watering tool, it activates whenever the soil moisture goes
 Final Set-up
 ```
 ### RPI1
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/rpi1.jpg "DHT11")
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/rpi1.jpeg)
 
 
 ### RPI2
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/rpi2.jpg "DHT11")
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/rpi2.jpeg)
 
 
 ```
