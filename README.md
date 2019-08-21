@@ -215,7 +215,67 @@ h) Return to IAM Roles. Click 'Create role', then select 'Lambda' under 'Choose 
 
 ![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20172534.png)
 
-i) Click 'Next: Tags', then 'Next: Review'. Name the role as 'updated_prefs_alerter'. Click 'Create role'
+i) Click 'Next: Tags', then 'Next: Review'. Name the role as 'updated_prefs_alerter'. Click 'Create role'.
+
+### Section 6 Creating DynamoDB tables
+
+a) Click on 'Services' at the top of the page, scroll down to find the 'Database' section, then click on 'DynamoDB'.
+
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20231538.png)
+
+b) Click 'Tables', then 'Create table'.
+
+c) You should see the following page. Name this table as 'credentials' and assign it a primary key 'username'. Once done, scroll to the bottom of the page and click 'Create'.
+
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20232343.png)
+
+d) On the following page, click on the table 'credentials'. On the sidebar that pops up, click the 'Items' tab.
+
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20232933.png)
+
+e) Click 'Create item'. In the dropdown menu on the top left corner of the popup, select the 'Text' option.
+
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20233235.png)
+
+f) Replace the contents of the textbox with the following. Click 'Save' when done.
+```
+{
+  "is_temp": "false",
+  "password": "password",
+  "username": "WateringPi"
+}
+
+```
+g) 'Click 'Create table', and name the table 'user_preferences', with a primary key of 'name'. Repeat steps (d) and (e) for this new table. Replace the text box contents with the following, and click 'Save' when done.
+```
+
+{
+  "dry_soil_threshold": "150",
+  "environment_refresh_interval": "30",
+  "name": "default",
+  "photo_interval": "30",
+  "soil_refresh_interval": "30",
+  "watering_duration": "20"
+}
+
+```
+h) Create another table with name 'soil_moisture', primary key of 'device_id' and sort key 'datetime_id'. There is no need to create any items for this table.
+
+i) Create another table 'light_temperature_humidity', with the same primary and sort keys as in step (h).
+
+### Section 7 Create Amazon S3 bucket
+
+a) Click on 'Services' at the top of the page, and click on 'S3' under the 'Storage' section.
+
+b) Click 'Create bucket'. Give your bucket a unique name, and note it down because you will need it later. Click 'Next' when done.
+
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20235306.png)
+
+c) On the next page, check the 'Keep all versions of an object in the same bucket' checkbox, then click 'Next'.
+
+![](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Annotation%202019-08-21%20235506.png)
+
+d) On the next page, ensure the 'Block all public access' checkbox is checked, click 'Next', and click 'Create bucket'.
 
 ### Section 11 References
 
