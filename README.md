@@ -44,8 +44,8 @@ Final Set-up
 ```
 Overview of the system
 
-![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Dispenser.PNG "DHT11")
 ```
+![Alt text](https://github.com/999sky999/CA2_IOT/blob/master/GitHub%20Images/Dispenser.PNG "DHT11")
 
 ## C. How the web application looks like?
 
