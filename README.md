@@ -64,7 +64,7 @@ Overview of the system
 
 ### Section 2 Hardware requirements 
 
-#### Hardware checklist
+#### Hardware checklist 
 
 Here are the hardware needed and what they are used for.
 
